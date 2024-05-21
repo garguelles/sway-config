@@ -76,8 +76,11 @@ input "1267:12693:ELAN0676:00_04F3:3195_Touchpad" {
     natural_scroll enabled
 }
 
-# swap ctrl + capslock
-input "type:keyboard" xkb_options caps:swapctrl
+input type:keyboard {
+  # Capslock key should work as escape key - caps lock as ctrl
+  # See /usr/share/X11/xkb/rules/xorg.lst for options
+  xkb_options ctrl:nocaps
+}
 
 ### Key bindings
 #
