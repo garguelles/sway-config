@@ -235,6 +235,16 @@ bindsym --locked XF86AudioMicMute exec --no-startup-id wpctl set-mute @DEFAULT_A
 bindsym --locked XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym --locked XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
+# Screenshot
+# capture all screens to clipboard
+bindsym $mod+Control+p exec grim - | wl-copy
+
+# capture the specified screen area to clipboard
+bindsym $mod+Control+Shift+p exec grim -g "$(slurp)" - | wl-copy
+
+# capture the focused monitor to clipboard
+bindsym $mod+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+
 #
 # Status Bar:
 #
