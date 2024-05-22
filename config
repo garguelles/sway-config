@@ -29,6 +29,9 @@ set $laptop "AU Optronics 0xFA9B Unknown"
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
+# colors
+client.focused #0FAEC1 #0FAEC1 #FFFFFF
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
