@@ -70,7 +70,11 @@ output * bg /usr/share/backgrounds/f40/default/f40-01-night.png fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "1133:45088:MX_Vertical_Mouse" {
+input "1133:45088:Logitech_MX_Vertical_Advanced_Ergonomic_Mouse" {
+    natural_scroll enabled
+}
+
+input "1133:45088:MX_Vertical" {
     natural_scroll enabled
 }
 
@@ -244,6 +248,12 @@ bindsym $mod+Control+Shift+p exec grim -g "$(slurp)" - | wl-copy
 
 # capture the focused monitor to clipboard
 bindsym $mod+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+
+# Set up the XDG desktop portal for better application compatibility
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+# Start the XDG desktop portal for Wayland to handle file dialogs and other desktop integration features
+exec xdg-desktop-portal-wlr
 
 #
 # Status Bar:
