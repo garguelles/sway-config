@@ -30,12 +30,13 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 # colors
-client.focused #0FAEC1 #0FAEC1 #FFFFFF
+# client.focused #0FAEC1 #0FAEC1 #FFFFFF
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/f40/default/f40-01-night.png fill
+# output * bg /usr/share/backgrounds/f40/default/f40-01-night.png fill
+output * bg /home/discovery/Pictures/wallpapers/lightbox.jpg fill
 #
 # Example configuration:
 #
@@ -276,5 +277,15 @@ exec xdg-desktop-portal-wlr
 bar { 
      swaybar_command waybar
 }
+
+for_window [title="."] title_format "%app_id"
+# Setting Border
+default_border pixel 1
+gaps inner 10
+gaps outer 5
+
+default_floating_border pixel 0
+titlebar_padding 2
+titlebar_border_thickness 0
 
 include @sysconfdir@/sway/config.d/*
