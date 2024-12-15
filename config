@@ -287,8 +287,10 @@ bar {
 for_window [title="."] title_format "%app_id"
 # Setting Border
 default_border pixel 1
-gaps inner 2
-gaps outer 2
+gaps inner 5
+gaps outer 5
+gaps top 6
+gaps bottom 6
 
 default_floating_border pixel 0
 titlebar_padding 2
