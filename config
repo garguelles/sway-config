@@ -258,6 +258,7 @@ bindsym $mod+Control+l exec swaylock
 
 # Set up the XDG desktop portal for better application compatibility
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 # Start the XDG desktop portal for Wayland to handle file dialogs and other desktop integration features
 exec xdg-desktop-portal-wlr
