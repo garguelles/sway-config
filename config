@@ -82,6 +82,10 @@ input "1133:45088:MX_Vertical" {
   natural_scroll enabled
 }
 
+input "1133:45085:Logitech_MX_Ergo_Multi-Device_Trackball" {
+  natural_scroll enabled
+}
+
 input "1267:12693:ELAN0676:00_04F3:3195_Touchpad" {
   tap enabled
     natural_scroll enabled
