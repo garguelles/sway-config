@@ -28,7 +28,9 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 # colors
-# client.focused #0FAEC1 #0FAEC1 #FFFFFF
+#client.focused #0FAEC1 #0FAEC1 #FFFFFF
+
+client.focused #0FAEC1 #0FAEC1 #FFFFFF #0FAEC1 #0FAEC1
 
 ### Output configuration
 #
@@ -297,7 +299,7 @@ bar {
 
 for_window [title="."] title_format "%app_id"
 # Setting Border
-default_border pixel 1
+default_border pixel 3
 gaps inner 5
 gaps outer 5
 gaps top 6
